@@ -1,0 +1,404 @@
+Script started at Tue Jul  2 00:43:00 PDT 2024
+Traceback (most recent call last):
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 117, in <module>
+    reservations_parent = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Reservations']/..")))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py", line 365, in _predicate
+    if element and element.is_enabled():
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 192, in is_enabled
+    return self._execute(Command.IS_ELEMENT_ENABLED)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x0000000104bc7a38 chromedriver + 4389432
+1   chromedriver                        0x0000000104bc0344 chromedriver + 4358980
+2   chromedriver                        0x00000001047dcafc chromedriver + 281340
+3   chromedriver                        0x00000001047ea878 chromedriver + 338040
+4   chromedriver                        0x00000001047e1d74 chromedriver + 302452
+5   chromedriver                        0x00000001047e0668 chromedriver + 296552
+6   chromedriver                        0x00000001047e2e44 chromedriver + 306756
+7   chromedriver                        0x00000001047e2ebc chromedriver + 306876
+8   chromedriver                        0x000000010481a7f8 chromedriver + 534520
+9   chromedriver                        0x0000000104815718 chromedriver + 513816
+10  chromedriver                        0x0000000104857cec chromedriver + 785644
+11  chromedriver                        0x0000000104813ed0 chromedriver + 507600
+12  chromedriver                        0x00000001048148a8 chromedriver + 510120
+13  chromedriver                        0x0000000104b8f3bc chromedriver + 4158396
+14  chromedriver                        0x0000000104b93e20 chromedriver + 4177440
+15  chromedriver                        0x0000000104b7507c chromedriver + 4051068
+16  chromedriver                        0x0000000104b9470c chromedriver + 4179724
+17  chromedriver                        0x0000000104b6807c chromedriver + 3997820
+18  chromedriver                        0x0000000104bb20d4 chromedriver + 4301012
+19  chromedriver                        0x0000000104bb2250 chromedriver + 4301392
+20  chromedriver                        0x0000000104bbff3c chromedriver + 4357948
+21  libsystem_pthread.dylib             0x000000018940ef94 _pthread_start + 136
+22  libsystem_pthread.dylib             0x0000000189409d34 thread_start + 8
+
+Script finished at Tue Jul  2 00:43:11 PDT 2024
+Script started at Tue Jul  2 00:51:14 PDT 2024
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Traceback (most recent call last):
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 167, in <module>
+    desired_court_element = wait_for_specific_reservation_to_be_available(driver, desired_court, desired_time)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 26, in wait_for_specific_reservation_to_be_available
+    court = driver.find_element(By.XPATH, specific_xpath)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+0   chromedriver                        0x0000000101283a38 chromedriver + 4389432
+1   chromedriver                        0x000000010127c344 chromedriver + 4358980
+2   chromedriver                        0x0000000100e98afc chromedriver + 281340
+3   chromedriver                        0x0000000100e73aec chromedriver + 129772
+4   chromedriver                        0x0000000100f00308 chromedriver + 705288
+5   chromedriver                        0x0000000100f13400 chromedriver + 783360
+6   chromedriver                        0x0000000100ecfed0 chromedriver + 507600
+7   chromedriver                        0x0000000100ed08a8 chromedriver + 510120
+8   chromedriver                        0x000000010124b3bc chromedriver + 4158396
+9   chromedriver                        0x000000010124fe20 chromedriver + 4177440
+10  chromedriver                        0x000000010123107c chromedriver + 4051068
+11  chromedriver                        0x000000010125070c chromedriver + 4179724
+12  chromedriver                        0x000000010122407c chromedriver + 3997820
+13  chromedriver                        0x000000010126e0d4 chromedriver + 4301012
+14  chromedriver                        0x000000010126e250 chromedriver + 4301392
+15  chromedriver                        0x000000010127bf3c chromedriver + 4357948
+16  libsystem_pthread.dylib             0x000000018940ef94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000189409d34 thread_start + 8
+
+Script finished at Tue Jul  2 00:51:28 PDT 2024
+Script started at Tue Jul  2 00:51:40 PDT 2024
+Traceback (most recent call last):
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 145, in <module>
+    event_name_input = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@data-qa-id='quick-reservation-eventType-name']")))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000104b3ba38 chromedriver + 4389432
+1   chromedriver                        0x0000000104b34344 chromedriver + 4358980
+2   chromedriver                        0x0000000104750afc chromedriver + 281340
+3   chromedriver                        0x00000001047932c8 chromedriver + 553672
+4   chromedriver                        0x00000001047cbcec chromedriver + 785644
+5   chromedriver                        0x0000000104787ed0 chromedriver + 507600
+6   chromedriver                        0x00000001047888a8 chromedriver + 510120
+7   chromedriver                        0x0000000104b033bc chromedriver + 4158396
+8   chromedriver                        0x0000000104b07e20 chromedriver + 4177440
+9   chromedriver                        0x0000000104ae907c chromedriver + 4051068
+10  chromedriver                        0x0000000104b0870c chromedriver + 4179724
+11  chromedriver                        0x0000000104adc07c chromedriver + 3997820
+12  chromedriver                        0x0000000104b260d4 chromedriver + 4301012
+13  chromedriver                        0x0000000104b26250 chromedriver + 4301392
+14  chromedriver                        0x0000000104b33f3c chromedriver + 4357948
+15  libsystem_pthread.dylib             0x000000018940ef94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000189409d34 thread_start + 8
+
+Script finished at Tue Jul  2 00:52:07 PDT 2024
+Script started at Tue Jul  2 00:52:10 PDT 2024
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Traceback (most recent call last):
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 167, in <module>
+    desired_court_element = wait_for_specific_reservation_to_be_available(driver, desired_court, desired_time)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 26, in wait_for_specific_reservation_to_be_available
+    court = driver.find_element(By.XPATH, specific_xpath)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+0   chromedriver                        0x00000001033aba38 chromedriver + 4389432
+1   chromedriver                        0x00000001033a4344 chromedriver + 4358980
+2   chromedriver                        0x0000000102fc0afc chromedriver + 281340
+3   chromedriver                        0x0000000102f9baec chromedriver + 129772
+4   chromedriver                        0x0000000103028308 chromedriver + 705288
+5   chromedriver                        0x000000010303b400 chromedriver + 783360
+6   chromedriver                        0x0000000102ff7ed0 chromedriver + 507600
+7   chromedriver                        0x0000000102ff88a8 chromedriver + 510120
+8   chromedriver                        0x00000001033733bc chromedriver + 4158396
+9   chromedriver                        0x0000000103377e20 chromedriver + 4177440
+10  chromedriver                        0x000000010335907c chromedriver + 4051068
+11  chromedriver                        0x000000010337870c chromedriver + 4179724
+12  chromedriver                        0x000000010334c07c chromedriver + 3997820
+13  chromedriver                        0x00000001033960d4 chromedriver + 4301012
+14  chromedriver                        0x0000000103396250 chromedriver + 4301392
+15  chromedriver                        0x00000001033a3f3c chromedriver + 4357948
+16  libsystem_pthread.dylib             0x000000018940ef94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000189409d34 thread_start + 8
+
+Script finished at Tue Jul  2 00:52:27 PDT 2024
+Script started at Tue Jul  2 00:53:00 PDT 2024
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Waiting for court 9 at 2:00 PM to become available...
+Traceback (most recent call last):
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 167, in <module>
+    desired_court_element = wait_for_specific_reservation_to_be_available(driver, desired_court, desired_time)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 26, in wait_for_specific_reservation_to_be_available
+    court = driver.find_element(By.XPATH, specific_xpath)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+0   chromedriver                        0x0000000100733a38 chromedriver + 4389432
+1   chromedriver                        0x000000010072c344 chromedriver + 4358980
+2   chromedriver                        0x0000000100348afc chromedriver + 281340
+3   chromedriver                        0x0000000100323aec chromedriver + 129772
+4   chromedriver                        0x00000001003b0308 chromedriver + 705288
+5   chromedriver                        0x00000001003c3400 chromedriver + 783360
+6   chromedriver                        0x000000010037fed0 chromedriver + 507600
+7   chromedriver                        0x00000001003808a8 chromedriver + 510120
+8   chromedriver                        0x00000001006fb3bc chromedriver + 4158396
+9   chromedriver                        0x00000001006ffe20 chromedriver + 4177440
+10  chromedriver                        0x00000001006e107c chromedriver + 4051068
+11  chromedriver                        0x000000010070070c chromedriver + 4179724
+12  chromedriver                        0x00000001006d407c chromedriver + 3997820
+13  chromedriver                        0x000000010071e0d4 chromedriver + 4301012
+14  chromedriver                        0x000000010071e250 chromedriver + 4301392
+15  chromedriver                        0x000000010072bf3c chromedriver + 4357948
+16  libsystem_pthread.dylib             0x000000018940ef94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000189409d34 thread_start + 8
+
+Script finished at Tue Jul  2 00:54:02 PDT 2024
+Script started at Tue Jul  2 00:55:00 PDT 2024
+Traceback (most recent call last):
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 117, in <module>
+    reservations_parent = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Reservations']/..")))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py", line 365, in _predicate
+    if element and element.is_enabled():
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 192, in is_enabled
+    return self._execute(Command.IS_ELEMENT_ENABLED)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x000000010279ba38 chromedriver + 4389432
+1   chromedriver                        0x0000000102794344 chromedriver + 4358980
+2   chromedriver                        0x00000001023b0afc chromedriver + 281340
+3   chromedriver                        0x00000001023be878 chromedriver + 338040
+4   chromedriver                        0x00000001023b5d74 chromedriver + 302452
+5   chromedriver                        0x00000001023b4668 chromedriver + 296552
+6   chromedriver                        0x00000001023b6e44 chromedriver + 306756
+7   chromedriver                        0x00000001023b6ebc chromedriver + 306876
+8   chromedriver                        0x00000001023ee7f8 chromedriver + 534520
+9   chromedriver                        0x00000001023e9718 chromedriver + 513816
+10  chromedriver                        0x000000010242bcec chromedriver + 785644
+11  chromedriver                        0x00000001023e7ed0 chromedriver + 507600
+12  chromedriver                        0x00000001023e88a8 chromedriver + 510120
+13  chromedriver                        0x00000001027633bc chromedriver + 4158396
+14  chromedriver                        0x0000000102767e20 chromedriver + 4177440
+15  chromedriver                        0x000000010274907c chromedriver + 4051068
+16  chromedriver                        0x000000010276870c chromedriver + 4179724
+17  chromedriver                        0x000000010273c07c chromedriver + 3997820
+18  chromedriver                        0x00000001027860d4 chromedriver + 4301012
+19  chromedriver                        0x0000000102786250 chromedriver + 4301392
+20  chromedriver                        0x0000000102793f3c chromedriver + 4357948
+21  libsystem_pthread.dylib             0x000000018940ef94 _pthread_start + 136
+22  libsystem_pthread.dylib             0x0000000189409d34 thread_start + 8
+
+Script finished at Tue Jul  2 00:55:09 PDT 2024
+Script started at Tue Jul  2 00:59:01 PDT 2024
+Traceback (most recent call last):
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 141, in <module>
+    tennis_court_link = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Sports Center 90 min. Tennis Courts']/parent::a")))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py", line 363, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+0   chromedriver                        0x0000000102dfba38 chromedriver + 4389432
+1   chromedriver                        0x0000000102df4344 chromedriver + 4358980
+2   chromedriver                        0x0000000102a10afc chromedriver + 281340
+3   chromedriver                        0x00000001029ebaec chromedriver + 129772
+4   chromedriver                        0x0000000102a78308 chromedriver + 705288
+5   chromedriver                        0x0000000102a8b400 chromedriver + 783360
+6   chromedriver                        0x0000000102a47ed0 chromedriver + 507600
+7   chromedriver                        0x0000000102a488a8 chromedriver + 510120
+8   chromedriver                        0x0000000102dc33bc chromedriver + 4158396
+9   chromedriver                        0x0000000102dc7e20 chromedriver + 4177440
+10  chromedriver                        0x0000000102da907c chromedriver + 4051068
+11  chromedriver                        0x0000000102dc870c chromedriver + 4179724
+12  chromedriver                        0x0000000102d9c07c chromedriver + 3997820
+13  chromedriver                        0x0000000102de60d4 chromedriver + 4301012
+14  chromedriver                        0x0000000102de6250 chromedriver + 4301392
+15  chromedriver                        0x0000000102df3f3c chromedriver + 4357948
+16  libsystem_pthread.dylib             0x000000018940ef94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000189409d34 thread_start + 8
+
+Script finished at Tue Jul  2 00:59:31 PDT 2024
+Script started at Tue Jul  2 01:04:00 PDT 2024
+Script started at Tue Jul  2 01:05:00 PDT 2024
+Script started at Tue Jul  2 01:06:01 PDT 2024
+Traceback (most recent call last):
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 113, in <module>
+    sign_in = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[text()='Sign In']")))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py", line 364, in _predicate
+    element = visibility_of(target)(driver)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py", line 173, in _predicate
+    return _element_if_visible(element)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py", line 179, in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+                      ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_displayed'
+Script finished at Tue Jul  2 01:07:05 PDT 2024
+Script started at Tue Jul  2 01:08:01 PDT 2024
+Traceback (most recent call last):
+  File "/Users/sarawan/booking_bot/booking_bot_script.py", line 113, in <module>
+    sign_in = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[text()='Sign In']")))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py", line 363, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/sarawan/myenv/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+0   chromedriver                        0x0000000102fbfa38 chromedriver + 4389432
+1   chromedriver                        0x0000000102fb8344 chromedriver + 4358980
+2   chromedriver                        0x0000000102bd4afc chromedriver + 281340
+3   chromedriver                        0x0000000102bafaec chromedriver + 129772
+4   chromedriver                        0x0000000102c3c308 chromedriver + 705288
+5   chromedriver                        0x0000000102c4f400 chromedriver + 783360
+6   chromedriver                        0x0000000102c0bed0 chromedriver + 507600
+7   chromedriver                        0x0000000102c0c8a8 chromedriver + 510120
+8   chromedriver                        0x0000000102f873bc chromedriver + 4158396
+9   chromedriver                        0x0000000102f8be20 chromedriver + 4177440
+10  chromedriver                        0x0000000102f6d07c chromedriver + 4051068
+11  chromedriver                        0x0000000102f8c70c chromedriver + 4179724
+12  chromedriver                        0x0000000102f6007c chromedriver + 3997820
+13  chromedriver                        0x0000000102faa0d4 chromedriver + 4301012
+14  chromedriver                        0x0000000102faa250 chromedriver + 4301392
+15  chromedriver                        0x0000000102fb7f3c chromedriver + 4357948
+16  libsystem_pthread.dylib             0x000000018940ef94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000189409d34 thread_start + 8
+
+Script finished at Tue Jul  2 01:10:38 PDT 2024
+Script started at Tue Jul  2 01:12:00 PDT 2024
+Script started at Tue Jul  2 01:13:00 PDT 2024
+Script started at Tue Jul  2 01:14:00 PDT 2024
