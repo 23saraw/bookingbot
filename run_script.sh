@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Activate the virtual environment
-source /Users/sarawan/myenv/bin/activate
+source /PATH TO YOUR VIRTUAL ENVIRONMENT/activate
 
-LOG_FILE="/Users/sarawan/booking_bot/booking_bot_log.log"
+LOG_FILE="/PATH TO YOUR LOG"
 
 echo "Script started at $(date)" >> $LOG_FILE
 
 
 # Run the Python script with arguments
-/Users/sarawan/myenv/bin/python /Users/sarawan/booking_bot/booking_bot_script.py "8:00 PM" "9" >> $LOG_FILE 2>&1
+/PATH TO PYTHON /PATH TO BOOKING SCRIPT "8:00 PM" "9" >> $LOG_FILE 2>&1
 
 echo "Script finished at $(date)" >> $LOG_FILE
 
