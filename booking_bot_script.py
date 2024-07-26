@@ -49,7 +49,7 @@ def wait_for_specific_reservation_to_be_available(driver, desired_court, desired
         time.sleep(1)  # short sleep time
 
 #when to run program
-target_time = datetime.strptime('08:00:00', '%H:%M:%S').time()
+target_time = datetime.strptime('10:20:00', '%H:%M:%S').time()
 
 #run code at target_time
 def wait_until(target_time):
@@ -185,7 +185,7 @@ if __name__ == "__main__":
         driver.execute_script("arguments[0].click();", desired_court_element)
         confirm_bookings_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@data-qa-id='quick-reservation-ok-button']")))
 
-        #click at 8am: GO GO GO!!
+        #click at designated target time
         wait_until(target_time)
         confirm_bookings_button.click()
 
