@@ -106,16 +106,16 @@ if __name__ == "__main__":
     # desired_court = input("Enter the desired court number (e.g., 3): ")
 
     #sign in url
-    driver.get("https://anc.apm.activecommunities.com/cupertino/reservation/landing?locale=en-US")
+    driver.get("URL OF BOOKING WEBSITE")
 
     #sign in
     wait = WebDriverWait(driver, 20)
     sign_in = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[text()='Sign In']")))
     sign_in.click()
     email_input = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Enter your Email address']")))
-    email_input.send_keys("bin_wan@yahoo.com")
+    email_input.send_keys("EMAIL")
     password_input = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@type='password']")))
-    password_input.send_keys("benjamin1966")
+    password_input.send_keys("PASSWORD")
     sign_in_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@type='submit' and contains(., 'Sign in')]")))
     sign_in_button.click()
 
